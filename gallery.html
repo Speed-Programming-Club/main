@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Speed Programming Club - Gallery</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body onload="gallery()">
+		<center>
+			<h1 onclick="goSomewhere('hub.html')" style="cursor:pointer;">Speed Programming Club</h1>
+			<h2>Gallery</h2>
+			<div class="row" style="margin:0px;padding:0px;">
+				<div class="col no-gutters" style="border-right: solid 1px;margin:0px;padding:0px;padding-right:-1px;margin-right:-1px;">
+					<h3>Winning Projects</h3>
+					<div id="everything1">
+					</div>
+				</div>
+				<div class="col no-gutters" style="margin:0px;padding:0px;">
+					<h3>Other Projects</h3>
+					<div id="everything">
+					</div>
+				</div>
+			</div>
+		</center>
+		<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js">
+		</script>
+		<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js">
+		</script>
+		<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js">
+		</script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js">
+		</script>
+		<script>
+  		var firebaseConfig = {
+    		apiKey: "AIzaSyBmCIiWFSI-fH9rCHesP3CUT3ufz_WdzT0",
+    		authDomain: "speed-programming-club.firebaseapp.com",
+    		databaseURL: "https://speed-programming-club.firebaseio.com",
+    		projectId: "speed-programming-club",
+    		storageBucket: "speed-programming-club.appspot.com",
+    		messagingSenderId: "412286831396",
+    		appId: "1:412286831396:web:21ead01adc50318dc441b1"
+  		};
+  		firebase.initializeApp(firebaseConfig);
+			const db = firebase.firestore();
+			if(!(localStorage.getItem("userToken"))){
+				location = "index.html"
+			}
+		</script>
+    <script src="script.js"></script>
+  </body>
+</html>

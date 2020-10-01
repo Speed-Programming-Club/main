@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Speed Programming Club - Profile</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body onload="profile()">
+		<center>
+			<h1 onclick="goSomewhere('hub.html')" style="cursor:pointer;">Speed Programming Club</h1>
+			<h1 id="showname"></h1>
+			<h2>Projects Created</h2>
+      <div style="display: flex;flex-wrap: wrap;justify-content:center;justify-content: space-around;" id="everything" style="margin:0px;padding:0px;">
+
+      </div>
+		</center>
+		<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js">
+		</script>
+		<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js">
+		</script>
+		<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js">
+		</script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js">
+		</script>
+		<script>
+  		var firebaseConfig = {
+    		apiKey: "AIzaSyBmCIiWFSI-fH9rCHesP3CUT3ufz_WdzT0",
+    		authDomain: "speed-programming-club.firebaseapp.com",
+    		databaseURL: "https://speed-programming-club.firebaseio.com",
+    		projectId: "speed-programming-club",
+    		storageBucket: "speed-programming-club.appspot.com",
+    		messagingSenderId: "412286831396",
+    		appId: "1:412286831396:web:21ead01adc50318dc441b1"
+  		};
+  		firebase.initializeApp(firebaseConfig);
+			const db = firebase.firestore();
+			if(!(localStorage.getItem("userToken"))){
+				location = "index.html"
+			}
+		</script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+h1{
+	font-family: 'Montserrat';
+}
+h2{
+	font-family: 'Montserrat';
+}
+h3{
+	font-family: 'Montserrat';
+}
+h4{
+	font-family: 'Montserrat';
+}
+h5{
+	font-family: 'Montserrat';
+}
+h6{
+	font-family: 'Montserrat';
+}
+p{
+	font-family: 'Montserrat';
+}
+pre{
+	font-family: 'Montserrat';
+}
+button{
+	font-family: 'Montserrat';
+	border-radius:10px;
+	padding:15px;
+	border: solid 1px;
+	cursor: pointer;
+	transition: 0.75s;
+}
+button:hover{
+	font-family: 'Montserrat';
+	border-radius:20px;
+	padding:15px;
+	border: solid 1px;
+	background-color:black;
+	color:white;
+	cursor: pointer;
+	transition: 0.75s;
+}
+input[type=text]{
+	font-family: 'Montserrat';
+	padding:20px;
+	border: solid 1px;
+	transition: 0.5s;
+}
+input[type=text]:focus{
+	font-family: 'Montserrat';
+	padding:20px;
+	border: solid 1px;
+	transition: 0.5s;
+	box-shadow: 0px 0px 5px 2.5px rgb(160, 223, 238);
+}
