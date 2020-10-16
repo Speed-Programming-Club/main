@@ -176,3 +176,37 @@ function profile(){
     }
   })
 }
+function bigboigallery(){
+	db.collection("projects")
+	.get()
+	.then(function (snapshot){
+		console.log(snapshot.docs.length)
+		for(i=snapshot.docs.length;i>= 0;i-=1){
+			console.log(i)
+			db.collection("projects")
+			.where("number","==",i)
+			.get()
+			.then(function (snapshot){
+				var h2 = document.createElement("h4");
+				h2.innerText = snapshot.docs[0].data().project
+				var h3 = document.createElement("h5");
+				h3.innerText = snapshot.docs[0].data().name
+        			var name = snapshot.docs[0].data().name
+        			h3.style["cursor"] = "pointer";
+				h3.setAttribute("onClick","goSomewhere(\"profile.html?username="+name+"\")")
+				var p = document.createElement("p")
+				p.innerText = "Click Here to Go To Project"
+				var url = snapshot.docs[0].data().url
+				p.style["cursor"] = "pointer";
+				p.setAttribute("onClick","goSomewhere(\""+url+"\")")
+				var hr = document.createElement("hr")
+				if(snapshot.docs[0].data().winner == 2){
+					document.getElementById("everything").appendChild(hr)
+					document.getElementById("everything").appendChild(h2)
+					document.getElementById("everything").appendChild(h3)
+					document.getElementById("everything").appendChild(p)
+				}
+			})
+		}
+	})
+}
